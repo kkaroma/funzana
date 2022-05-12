@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Courses</h1>
+
+<div class = "row">
+  <% @courses.each do |course| %>
+    <div class = "col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <%= link_to course.name, course.url %>
+      <p>
+        <%= link_to "Show this course", course %>
+        
+      </p>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "New course", new_course_path, class: "btn btn-primary" %>
