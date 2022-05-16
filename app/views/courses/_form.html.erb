@@ -25,6 +25,10 @@
     <%= form.label :category_id, style: "display: block" %>
     <%= form.text_field :category_id %>
   </div>
+  <div>
+    <%= form.label :body %>
+    <%= form.rich_text_area :body %>
+  </div>
 
   <div>
     <%= form.submit %>
