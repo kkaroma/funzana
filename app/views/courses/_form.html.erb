@@ -11,26 +11,26 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="form-group">
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :url, style: "display: block" %>
-    <%= form.text_field :url %>
+    <%= form.text_field :url, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :category_id, style: "display: block" %>
     <%= form.select :category_id, Category.all.collect {|c| [c.name, c.id]}, include_blank: true, class: "form-control" %>
   </div>
   <div>
     <%= form.label :body %>
-    <%= form.rich_text_area :body %>
+    <%= form.rich_text_area :body, class: "form-control customized-min-height" %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary mt-2"%>
   </div>
 <% end %>
