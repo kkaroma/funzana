@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /courses or /courses.json
   def index
@@ -21,7 +22,8 @@ class CoursesController < ApplicationController
 
   # POST /courses or /courses.json
   def create
-    @course = Course.new(course_params)
+    #@course = Course.new(course_params)
+    @course = current_user.courses.build(course_params)
 
     respond_to do |format|
       if @course.save
@@ -65,6 +67,6 @@ class CoursesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def course_params
-      params.require(:course).permit(:name, :url, :category_id, :body)
+      params.require(:course).permit(:name, :url, :category_id, :body, :user_id)
     end
 end
