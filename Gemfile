@@ -33,6 +33,12 @@ gem "jbuilder"
 # Authentication with devise
 gem 'devise', '~> 4.8', '>= 4.8.1'
 
+#email validation
+#gem 'email_validator', '~> 2.2', '>= 2.2.3'
+
+# Validate URL
+gem "validate_url"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
