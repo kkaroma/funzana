@@ -8,7 +8,7 @@
     <span class="category-text"> <%= course.category.name %></span><br>
       <strong><%= link_to course.name, course.url %></strong>
       <br />
-      <%= course.body %>
+      <%= course.body.truncate(27) %>
       <p>
        <em><%= link_to "Show this course", course %></em>
         
