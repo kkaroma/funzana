@@ -5,6 +5,7 @@
 <div class = "row">
   <% @courses.each do |course| %>
     <div class = "col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <span class="category-text"> <%= course.category.name %></span><br>
       <strong><%= link_to course.name, course.url %></strong>
       <p>
        <em><%= link_to "Show this course", course %></em>
