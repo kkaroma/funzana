@@ -6,6 +6,7 @@ class CoursesController < ApplicationController
   def index
     @courses = Course.where(user_id: current_user).order("category_id ASC")
     
+    
     #@courses_categorised = Course.where(user_id: current_user).where(category_id: :params[:category])
   end
 
