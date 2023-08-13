@@ -19,6 +19,7 @@ gem "puma", "~> 5.0"
 gem "jsbundling-rails"
 
 gem 'jquery-rails'
+gem 'rails_admin', '~> 3.1', '>= 3.1.2'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
@@ -84,3 +85,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+gem "sassc-rails"
