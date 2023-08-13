@@ -22,8 +22,11 @@
             <% @courses.each do |course| %>
                 <div class="col-md-3 col-sm-6 mt-2 pt-2">
                 <%= link_to course.name, course.url, target: :_blank %>
+                <%= course.url %>
+                <%= course %>
                 </div>
             <% end %>
+            <%= @user %>
         </div>
     <div>
 </section>
