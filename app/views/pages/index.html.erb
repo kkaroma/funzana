@@ -19,13 +19,19 @@
 <section class="course-list py-5">
     <div class="container course-bg">
         <div class="row">
+        
             <% @courses.each do |course| %>
                 <div class="col-md-3 col-sm-6 mt-2 pt-2">
-                <%= link_to course.name, course.url, target: :_blank %>
-                <%= course.url %>
+                <div class="card border-success text-white mb-3" style="max-width: 18rem;">
+                    <div class="card-header"> <h6><%= link_to course.name, course.url, target: :_blank %> </h6></div>
+                    <div class="card-body">
+                    <p class="card-text"><%= link_to course.url, course.url, target: :_blank %> </p>
+                </div>
+                </div>
                 </div>
             <% end %>
             <%= @user %>
+        </div>
         </div>
     <div>
 </section>
